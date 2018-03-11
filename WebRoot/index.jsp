@@ -23,29 +23,32 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    	<a href="user/getUser">getUser</a><br>
    
   	<!-- 注册 -->
-   	<a href="user/addUser">addUser</a><br>
+   	<a href="user/add">addUser</a><br>
    	
    	<!-- 登录 -->
-   	<a href="user/loginUser">loginUser</a><br>
+   	<a href="user/login">loginUser</a><br>
    	
    	<!-- 更新用户信息 -->
-   	<a href="user/updateUser">updateUser</a><br>
+   	<a href="user/update">updateUser</a><br>
    	
    	<!-- 获取新的消息 -->
    	<a href="user/message">newMessages</a><br>
+   	
    	
    	
    	<!-- 获取全部帖子 -->
    	<a href="post/all">allPost</a><br>
    	
    	<!-- 获取特定帖子信息 -->
-   	<a href="post/infos">specificInfo</a><br>
+   	<a href="post/info">specificInfo</a><br>
    	
    	<!-- 发布帖子 -->
    	<a href="post/post">post</a><br>
    	
    	<!-- 评论帖子 -->
    	<a href="post/comment">postComment</a><br>
+   	
+   	
    	
    	<!-- 获取特定文化板块信息 -->
    	<a href="culture/info">cultureInfo</a><br>
@@ -54,7 +57,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    	<a href="culture/comment">cultureComment</a><br>
    	
    	<!-- 获取文化板块更多信息 -->
-   	<a href="culture/loginUser">moreInfo</a><br>
+   	<a href="culture/moreInfo">moreInfo</a><br>
+   	
+   	
    	
    	<!-- 上线文化产品 -->
    	<a href="market/addSale">addSale</a><br>

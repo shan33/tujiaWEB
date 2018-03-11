@@ -33,9 +33,11 @@
 	<!-- 使用注释(自定义配置) -->
 	<mvc:annotation-driven/>
 
-	<mvc:resources mapping="/pics/**" location="/pics/" cache-period="31556926"/>
-	<mvc:resources mapping="/js/**" location="/js/" cache-period="31556926"/>  
-    <mvc:resources mapping="/css/**" location="/css/" cache-period="31556926"/>
+	<mvc:default-servlet-handler/>
+	
+	<!-- <mvc:resources mapping="/pics/**" location="/pics/" />
+	<mvc:resources mapping="/js/**" location="/js/" />  
+    <mvc:resources mapping="/css/**" location="/css/" />  -->
 	
 	
 	
@@ -51,7 +53,7 @@
 	<!-- 配置视图解析路径 -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" id="internalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/" />
-		<property name="suffix" value=".jsp" />	
+		<property name="suffix" value="jsp" />	
 	</bean>
 
 	<!--  JDBC 	-->
@@ -74,5 +76,15 @@
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>	 
 	
+	<bean id="cultureDao" class="com.xls.springmvc.dao.CultureDao">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>	 
 	
+	<bean id="marketDao" class="com.xls.springmvc.dao.MarketDao">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>	 
+	
+	<bean id="postDao" class="com.xls.springmvc.dao.PostDao">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>	 
 </beans>
